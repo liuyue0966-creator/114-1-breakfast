@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import NavLinks  from "./NavLinks";
 import { NAV_ITEMS, isPathActive } from "../../utils/navigation";
 import UserMenu from "./UserMenu";
-import useTheme from "../../hooks/useTheme.js"
+import useTheme from "../../hooks/useTheme"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +20,7 @@ export default function Header() {
           }`}
         >
           <div
-            className="btn bg-ghost md-hidden"
+            className="btn bg-ghost md:hidden"
             onClick={() => setIsMenuOpen((open) => !open)}
           >
             <HiBars3 className="w-6 h-6" />{" "}
@@ -39,7 +39,7 @@ export default function Header() {
           {/* 導覽列的中間部分:Logo品牌 */}
           <Link 
             to="/"
-            className="btn btn-ghost text-lg font-bold text-primary
+            className="btn btn-ghost text-lg font-bold text-primary 
             hover:text-primary-focus transition-colors duration-200"
           >
             🍔早餐時光🍳
