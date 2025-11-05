@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>優先級測試</title>
+    <style>
+        /* 測試不同的選擇器優先級 */
+        p { color: black; }
+        .text { color: blue; }
+        #special { color: green; }
+        p.text { color: red; }
+        #special.text { color: purple; }
+        p#special.text { color: orange; }
+    </style>
+</head>
+<body>
+    <p>普通段落</p>
+    <p class="text">有 class 的段落</p>
+    <p id="special">有 ID 的段落</p>
+    <p class="text" id="special">同時有 class 和 ID 的段落</p>
+</body>
+</html>

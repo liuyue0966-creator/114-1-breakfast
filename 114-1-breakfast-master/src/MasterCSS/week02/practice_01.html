@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>選擇器練習</title>
+    <style>
+        /* 在這裡撰寫 CSS */
+        /* 1. Header 樣式 */
+        #main-header {
+           background-color: #2c3e50;
+           color: white;
+           padding: 20px;
+        }
+        /* 2. 導航連結樣式 */
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        /* 3. 導航連結 hover 效果 */
+        nav a:hover {
+            background-color: #3498db;
+            border-radius: 4px;
+        }
+        /* 4. 介紹段落樣式 */
+        .intro {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        /* 5. 精選文章背景 */
+        .featured {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        /* 6. 每個 article 的第一個 h2 */
+        article h2:first-child {
+            color: #dc3545;
+        }
+        /* 7. Footer 樣式 */
+        footer {
+            text-align: center;
+            color: #666;
+            padding: 20px;
+            border-top: 1px solid #dee2e6;
+        }
+        /* 額外樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+        display: inline-block;
+        }
+        article {
+            margin: 20px 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <h1>我的部落格</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#about">關於</a></li>
+                <li><a href="#contact">聯絡</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <article class="post">
+            <h2>第一篇文章</h2>
+            <p class="intro">這是文章的介紹段落。</p>
+            <p>這是文章的內容段落。</p>
+            <p>這是另一個內容段落。</p>
+        </article>
+        
+        <article class="post featured">
+            <h2>精選文章</h2>
+            <p class="intro">這是精選文章的介紹。</p>
+            <p>精選文章的內容。</p>
+        </article>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 我的部落格</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>表單樣式練習</title>
+    <style>
+        /* 在這裡撰寫 CSS */
+        /* 基礎樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .contact-form h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        /* 1. 必填欄位標記 */
+        label[for="name"]::after,
+        label[for="email"]::after,
+        label[for="message"]::after {
+            content: " *";
+            color: #dc3545;
+        }
+        /* 2. 輸入欄位統一樣式 */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        /* 3. Focus 狀態 */
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }
+        /* 4. 按鈕樣式 */
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+        }
+        button[type="reset"] {
+            background-color: #6c757d;
+            color: white;
+        }
+        /* 4. Disabled 按鈕樣式 */
+        button:disabled {
+            background-color: #e9ecef;
+            color: #6c757d;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        /* 6. 按鈕 hover 效果 */
+        button:not(:disabled):hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        button[type="reset"]:not(:disabled):hover {
+            background-color: #545b62;
+        } 
+        /* 5. Checkbox 樣式 */
+        input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.2);
+        }
+
+        input[type="checkbox"]:checked {
+            accent-color: #007bff;
+        }
+        /* Label 樣式 */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #495057;
+        }
+        /* Textarea 特殊設定 */
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <form class="contact-form">
+        <h2>聯絡我們</h2>
+        
+        <div class="form-group">
+            <label for="name">姓名 *</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">電子郵件 *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">電話</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        
+        <div class="form-group">
+            <label for="message">訊息 *</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>
+                <input type="checkbox" name="newsletter" checked>
+                訂閱電子報
+            </label>
+        </div>
+        
+        <div class="form-group">
+            <button type="submit">送出</button>
+            <button type="reset" disabled>重設</button>
+        </div>
+    </form>
+</body>
+</html>
