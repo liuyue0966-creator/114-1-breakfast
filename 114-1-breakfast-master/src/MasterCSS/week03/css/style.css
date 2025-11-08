@@ -1,0 +1,26 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin: 0 10px;
+}
+
+a:hover {
+  background-color: black;
+  color: whitesmoke;
+}
