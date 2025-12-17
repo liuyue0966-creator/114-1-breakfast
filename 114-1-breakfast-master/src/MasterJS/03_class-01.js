@@ -48,3 +48,4 @@ for(const key in p1){
 for(const key in p2){
     console.log(`${key}: ${p2[key]}`);
 }
+
