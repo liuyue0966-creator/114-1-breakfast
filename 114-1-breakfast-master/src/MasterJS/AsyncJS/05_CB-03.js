@@ -21,7 +21,11 @@ const getRepos = (userName, cbFn) => {
 };
 
 getUser(1, (user) => {
-  console.log(`user data from remote: id: ${user.id}`)})); // async: 交辦
+  console.log(`user data from remote: id: ${user.id}, name: ${user.name}`);
+  getRepos(user.name, (repos) => {
+    console.log(`user's repos:`, repos);
+  });
+}); // async: 交辦
 
 */
 
